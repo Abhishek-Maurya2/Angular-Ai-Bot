@@ -1,0 +1,27 @@
+.containers {
+  background-color: #f0f4f9;
+}
+.box {
+  background-color: rgb(255, 255, 255);
+  /* min-width: 60vw; */
+}
+.st {
+  min-width: 30vw;
+}
+.emsp {
+  min-height: 20vh;
+}
+.bs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+}
+.bs a {
+  text-decoration: none;
+  color: #0b5ed7;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: .5rem; 
+}

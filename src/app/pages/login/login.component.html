@@ -1,0 +1,43 @@
+<div
+  class="containers d-flex flex-column align-items-center justify-content-center vh-100"
+>
+  <div
+    class="box d-flex align-items-center gap-4 justify-content-center p-4 rounded-4"
+  >
+    <div class="st">
+      <img
+        src="https://source.unsplash.com/random/100x100"
+        alt="login"
+        class="rounded-circle"
+      />
+      <p class="fs-1">Login</p>
+      <p>Sign in to your account</p>
+      <div class="emsp"></div>
+    </div>
+    <form action="" class="d-flex flex-column align-items-start">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        placeholder="Username"
+        class="form-control rounded-3 my-2 border-2"
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Password"
+        class="form-control rounded-3 my-2 border-2"
+      />
+      <div class="bs">
+        <button class="btn btn-primary rounded-pill px-4 py-2 mt-2">
+          Login
+        </button>
+        <!-- <a href="/signup">Create Account</a> -->
+        <a [routerLink]="['/signup']" class="link">Create Account</a>
+      </div>
+      <span class="d-flex gap-2 mt-4">
+        <p>Forgot your password ?</p>
+        <a class="link" href="#">Reset Account</a>
+      </span>
+    </form>
+  </div>
+</div>
