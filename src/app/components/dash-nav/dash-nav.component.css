@@ -2,7 +2,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 96vw;
+  /* width: 96vw; */
+  width: 100%;
   padding: 0.5rem 2rem;
   font-size: 1.4rem;
 }
