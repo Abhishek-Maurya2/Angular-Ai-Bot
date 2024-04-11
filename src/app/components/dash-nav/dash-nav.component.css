@@ -42,3 +42,18 @@ button:hover {
 .pro:hover {
   background-color: #e0e0e0;
 }
+.menuBtn {
+  display: none;
+  padding: 0px 8px;
+}
+.menuBtn span {
+  margin-top: 8px;
+}
+@media screen and (max-width: 760px) {
+  .menuBtn {
+    display: block;
+  }
+  nav {
+    padding: 0.5rem 1rem;
+  }
+}

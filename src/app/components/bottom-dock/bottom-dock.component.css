@@ -16,7 +16,7 @@ input {
   border: none;
   background: none;
   padding: 1rem;
-  min-width: 35vw;
+  min-width: 600px;
 }
 input:focus {
   outline: none;
@@ -38,4 +38,36 @@ button span {
 button:hover {
   cursor: pointer;
   background-color: #e9edf2;
+}
+@media screen and (max-width: 900px) {
+  input {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 800px) {
+  input {
+    min-width: 450px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  input {
+    min-width: 350px;
+  }
+}
+@media screen and (max-width: 450px) {
+  input {
+    min-width: 300px;
+  }
+}
+@media screen and (max-width: 400px) {
+  input {
+    min-width: 250px;
+  }
+}
+@media screen and (max-width: 350px) {
+  input {
+    min-width: 200px;
+  }
+  
 }

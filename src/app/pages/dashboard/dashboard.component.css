@@ -1,7 +1,21 @@
+.mainBox {
+  overflow: hidden;
+}
 .navsAll {
-    /* w-full h-screen bg-zinc-900 flex flex-col */
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
+  /* w-full h-screen bg-zinc-900 flex flex-col */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.res {
+  gap: 4rem;
+  overflow-y: auto;
+  margin-bottom: 7rem;
+}
+
+@media screen and (max-width: 760px) {
+  app-dash-side-nav {
+    display: none;
+  }
 }

@@ -1,0 +1,31 @@
+<div class="ModalContainer" *ngIf="modal">
+  <div class="left d-flex flex-column align-items-start justify-content-between">
+    <div class="d-flex flex-column align-items-start">
+      <button (click)="toggleModal()">
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
+      <button
+        class="addBtn d-flex align-items-center justify-content-center gap-2"
+      >
+        <span class="material-symbols-outlined">add</span>
+        <p>New Chat</p>
+      </button>
+    </div>
+    <div class="d-flex flex-column align-items-start">
+      <button class="d-flex align-items-center justify-content-center gap-2">
+        <span class="material-symbols-outlined"> help </span>
+        <p>Help</p>
+      </button>
+      <button class="d-flex align-items-center justify-content-center gap-2">
+        <span class="material-symbols-outlined"> history </span>
+        <p>History</p>
+      </button>
+      <button class="d-flex align-items-center justify-content-center gap-2">
+        <span class="material-symbols-outlined"> settings </span>
+        <p>Settings</p>
+      </button>
+      <p class="anot">Build by Abhishek with ❤️</p>
+    </div>
+  </div>
+  <div class="right" (click)="toggleModal()"></div>
+</div>

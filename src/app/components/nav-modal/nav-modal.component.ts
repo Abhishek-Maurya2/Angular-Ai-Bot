@@ -1,18 +1,17 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { SharedService } from './../../shared.service';
 
 @Component({
-  selector: 'app-dash-nav',
+  selector: 'app-nav-modal',
   standalone: true,
-  imports: [],
-  templateUrl: './dash-nav.component.html',
-  styleUrl: './dash-nav.component.css',
+  imports: [NgIf],
+  templateUrl: './nav-modal.component.html',
+  styleUrl: './nav-modal.component.css',
 })
-export class DashNavComponent {
-  expand: boolean | undefined;
-  modal: boolean | undefined;
+export class NavModalComponent {
+  modal: boolean = false;
   constructor(private SharedService: SharedService) {
-    this.SharedService.expand$.subscribe((expand) => (this.expand = expand));
     this.SharedService.modal$.subscribe((modal) => (this.modal = modal));
   }
   toggleModal() {

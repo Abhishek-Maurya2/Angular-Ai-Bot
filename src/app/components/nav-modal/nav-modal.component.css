@@ -1,0 +1,57 @@
+.ModalContainer {
+  display: flex;
+  flex-direction: row;
+
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f0f4f9;
+  padding: 0.5rem;
+  min-width: 200px;
+}
+.right {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+}
+.cont {
+  background-color: #f0f4f9;
+  height: 100vh;
+  padding: 0.5rem;
+}
+button {
+  border: none;
+  background: none;
+  border-radius: 2rem;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button:hover {
+  background-color: #e0e0e0;
+}
+.addBtn {
+  margin-top: 2rem;
+  background-color: #dbdcdf;
+  padding: 0.7rem;
+}
+button p {
+  padding: 0;
+  margin: 0;
+}
+.anot {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  padding: 8px;
+}
