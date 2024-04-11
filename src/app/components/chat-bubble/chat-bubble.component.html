@@ -1,9 +1,9 @@
-<div class="mainBox">
+<div class="mainBox" *ngFor="let item of History">
   <div class="QueryBox">
     <div class="imgBox">
       <img src="https://source.unsplash.com/random/900×700/?fruit" alt="" />
     </div>
-    <p>This is the users question?</p>
+    <p>{{ item.prompt }}</p>
   </div>
   <div class="ResponseBox">
     <div class="imgBox">
@@ -11,10 +11,7 @@
     </div>
     <div class="d-flex flex-column gap-2">
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat error
-        quos blanditiis aliquid recusandae ea, fugiat, totam sunt nesciunt
-        consequuntur et, libero suscipit beatae? Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Sequi aspernatur omnis quae.
+        {{ item.response }}
       </p>
       <div class="d-flex flex-row gap-1">
         <button>
@@ -28,7 +25,7 @@
             <span class="material-symbols-outlined"> share </span>
           </span>
         </button>
-        <button class="searchBtn">
+        <button class="searchBtn" (click)="gSearch()">
           <div class="search-with-g">
             <img src="../../../assets/google.png" alt="" />
           </div>

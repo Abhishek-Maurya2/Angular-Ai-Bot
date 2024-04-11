@@ -5,8 +5,15 @@
     <a routerLink="/" class="nav-link">Logo</a>
   </div>
   <ul class="h6 nav-item d-flex align-items-center list-unstyled gap-4 p-0 m-0">
-    <li><a routerLink="/dashboard" class="nav-link">Dashboard</a></li>
-    <li><a routerLink="/login" class="nav-link">Login</a></li>
-    <li><a routerLink="/signup" class="nav-link">Sign Up</a></li>
+    <li *ngIf="isAuth">
+      <a routerLink="/dashboard" class="nav-link">Dashboard</a>
+    </li>
+    <li *ngIf="!isAuth"><a routerLink="/login" class="nav-link">Login</a></li>
+    <li *ngIf="!isAuth">
+      <a routerLink="/signup" class="nav-link">Sign Up</a>
+    </li>
+    <li *ngIf="isAuth" (click)="logout()">
+      <p class="nav-link m-0 p-0">Log out</p>
+    </li>
   </ul>
 </nav>

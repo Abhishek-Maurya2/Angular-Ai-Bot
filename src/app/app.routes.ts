@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { Auth, onAuthStateChanged } from '@angular/fire/auth';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

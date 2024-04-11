@@ -1,7 +1,15 @@
-<div class="main d-flex align-items-center justify-content-center" [style.left]="expand ? '200px' : ''">
-  <div class="dock">
-    <input type="text" placeholder="Enter prompt here" class="" />
+<div
+  class="main d-flex align-items-center justify-content-center"
+  [style.left]="expand ? '200px' : ''"
+>
+  <form class="dock" (ngSubmit)="generate($event)">
+    <input
+      type="text"
+      placeholder="Enter prompt here"
+      name="prompt"
+      [(ngModel)]="prompt"
+    />
     <button><span class="material-symbols-outlined"> search </span></button>
     <button><span class="material-symbols-outlined"> mic </span></button>
-  </div>
+  </form>
 </div>

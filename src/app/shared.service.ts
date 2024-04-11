@@ -16,4 +16,5 @@ export class SharedService {
   toggleModal() {
     this._modal.next(!this._modal.value);
   }
+
 }

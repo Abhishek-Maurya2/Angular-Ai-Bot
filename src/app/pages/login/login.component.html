@@ -14,17 +14,21 @@
       <p>Sign in to your account</p>
       <div class="emsp"></div>
     </div>
-    <form action="" class="d-flex flex-column align-items-start">
+    <form (ngSubmit)="login($event)" class="d-flex flex-column align-items-start">
       <label for="username">Username</label>
       <input
         type="text"
-        placeholder="Username"
+        placeholder="Email"
+        name="email"
+        [(ngModel)]="email"
         class="form-control rounded-3 my-2 border-2"
       />
       <label for="password">Password</label>
       <input
         type="password"
         placeholder="Password"
+        name="password"
+       [(ngModel)]="password"
         class="form-control rounded-3 my-2 border-2"
       />
       <div class="bs">
