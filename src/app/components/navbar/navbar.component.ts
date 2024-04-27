@@ -17,6 +17,7 @@ export class NavbarComponent {
   async logout() {
     await this.auth.signOut().then(() => {
       localStorage.removeItem('user');
+      localStorage.removeItem('history');
       this.isAuth = false;
     });
   }

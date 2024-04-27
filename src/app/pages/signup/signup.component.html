@@ -2,14 +2,16 @@
   class="containers d-flex flex-column align-items-center justify-content-center vh-100"
 >
   <div
-    class="box d-flex align-items-center gap-4 justify-content-center p-4 rounded-4"
+    class="box d-flex gap-4 justify-content-center p-4 rounded-4"
   >
     <div class="st">
-      <img
-        src="https://source.unsplash.com/random/100x100"
-        alt="login"
-        class="rounded-circle"
-      />
+      <div>
+        <img
+          src="../../../assets/ai.png"
+          alt="login"
+          class="rounded-circle img-fluid"
+        />
+      </div>
       <p class="fs-1">Sign Up</p>
       <p>Create a new account</p>
       <div class="emsp"></div>
@@ -18,6 +20,23 @@
       (ngSubmit)="register($event)"
       class="d-flex flex-column align-items-start"
     >
+      <!-- input profile image -->
+      <label for="profile">Profile</label>
+      <input
+        type="file"
+        name="profile"
+        (change)="onFileSelected($event)"
+        class="form-control rounded-3 my-2 border-2"
+      />
+      <img
+        *ngIf="profileImage"
+        [src]="profileImage"
+        alt="profile"
+        class="rounded-circle"
+        width="100"
+        height="100"
+      />
+
       <label for="name">Name</label>
       <input
         type="text"

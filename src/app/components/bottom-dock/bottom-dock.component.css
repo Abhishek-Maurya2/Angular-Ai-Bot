@@ -39,6 +39,21 @@ button:hover {
   cursor: pointer;
   background-color: #e9edf2;
 }
+form img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 900px) {
   input {
     min-width: 500px;

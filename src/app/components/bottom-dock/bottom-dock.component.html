@@ -9,7 +9,7 @@
       name="prompt"
       [(ngModel)]="prompt"
     />
-    <button><span class="material-symbols-outlined"> search </span></button>
-    <button><span class="material-symbols-outlined"> mic </span></button>
+    <button *ngIf="!loading"><span class="material-symbols-outlined"> search </span></button>
+    <img *ngIf="loading" src="../../../assets/ai.png" alt="" class="img-fluid ">
   </form>
 </div>

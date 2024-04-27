@@ -2,19 +2,24 @@
   class="containers d-flex flex-column align-items-center justify-content-center vh-100"
 >
   <div
-    class="box d-flex align-items-center gap-4 justify-content-center p-4 rounded-4"
+    class="box d-flex gap-4 justify-content-center p-4 rounded-4"
   >
     <div class="st">
-      <img
-        src="https://source.unsplash.com/random/100x100"
-        alt="login"
-        class="rounded-circle"
-      />
+      <div>
+        <img
+          src="../../../assets/ai.png"
+          alt="login"
+          class="rounded-circle img-fluid"
+        />
+      </div>
       <p class="fs-1">Login</p>
       <p>Sign in to your account</p>
       <div class="emsp"></div>
     </div>
-    <form (ngSubmit)="login($event)" class="d-flex flex-column align-items-start">
+    <form
+      (ngSubmit)="login($event)"
+      class="d-flex flex-column align-items-start"
+    >
       <label for="username">Username</label>
       <input
         type="text"
@@ -28,7 +33,7 @@
         type="password"
         placeholder="Password"
         name="password"
-       [(ngModel)]="password"
+        [(ngModel)]="password"
         class="form-control rounded-3 my-2 border-2"
       />
       <div class="bs">

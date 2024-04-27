@@ -8,6 +8,11 @@
 .st {
   min-width: 30vw;
 }
+.st div{
+  max-width: 50px;
+  max-height: 50px;
+  overflow: hidden;
+}
 .emsp {
   min-height: 20vh;
 }
@@ -16,12 +21,11 @@
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
-
 }
 .bs a {
   text-decoration: none;
   color: #0b5ed7;
   font-size: 1rem;
   font-weight: 500;
-  margin-top: .5rem; 
+  margin-top: 0.5rem;
 }

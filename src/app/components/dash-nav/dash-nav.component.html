@@ -12,8 +12,46 @@
         alt=""
       />Get Pro
     </p>
-    <button>
+    <button (click)="toggleProfileModal()">
       <span class="material-symbols-outlined"> account_circle </span>
     </button>
   </div>
 </nav>
+<div class="profileModal" *ngIf="profileModal">
+  <div class="d-flex flex-column align-items-center p-2 gap-1 pm">
+    <div class="d-flex flex-row align-items-center justify-content-between pm">
+      <div class="d"></div>
+      <button class="rounded-circle" (click)="toggleProfileModal()">
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+    </div>
+    <div
+      class="d-flex flex-column gap-2 align-items-center justify-content-center"
+    >
+      <div class="rounded-circle profilePic">
+        <img [src]="user.profileImg" alt="" class="" />
+      </div>
+      <p>{{ user.name }}</p>
+      <p>{{ user.email }}</p>
+    </div>
+    <div class="d-flex flex-row mt-1">
+      <div class="options">
+        <button
+          class="d-flex flex-row gap-2 align-items-center justify-content-center"
+        >
+          <span class="material-symbols-outlined"> settings </span>
+          <p>Settings</p>
+        </button>
+      </div>
+      <div class="options">
+        <button
+          (click)="logout()"
+          class="d-flex flex-row gap-2 align-items-center justify-content-center"
+        >
+          <span class="material-symbols-outlined"> logout </span>
+          <p>Logout</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
