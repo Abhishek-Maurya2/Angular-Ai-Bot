@@ -67,6 +67,7 @@ button:hover {
   padding: 0;
   margin: 0;
 }
+
 @media screen and (max-width: 768px) {
   .searchBtn p {
     display: none;

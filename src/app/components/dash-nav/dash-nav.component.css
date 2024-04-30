@@ -7,6 +7,10 @@ nav {
   padding: 0.5rem 2rem;
   font-size: 1.4rem;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 p {
   margin: 0;
   padding: 0;
@@ -62,7 +66,7 @@ nav button:hover {
   position: fixed;
   top: 55px;
   right: 50px;
-  background-color: #e6e6e6b1;
+  background-color: #f0f4f9;
   border-radius: 1rem;
 }
 .pm {
@@ -75,6 +79,14 @@ nav button:hover {
 .profilePic {
   width: 100px;
   height: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profilePics {
+  width: 30px;
+  height: 30px;
   overflow: hidden;
   display: flex;
   justify-content: center;

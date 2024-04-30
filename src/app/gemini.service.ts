@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { environment } from '../environments/environment';
 import { BehaviorSubject } from 'rxjs';
-import { Firestore } from '@angular/fire/firestore';
+import * as marked from 'marked';
 
 @Injectable({
   providedIn: 'root',
@@ -21,12 +21,23 @@ export class GeminiService {
     const model = this.gemini.getGenerativeModel({ model: 'gemini-pro' });
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const text = response.text();
+    let text = response.text();
+
+    // Manually convert Markdown to HTML
+    text = text
+      .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') // bold
+      .replace(/\*(.*?)\*/g, '<i>$1</i>') // italics
+      .replace(/~~(.*?)~~/g, '<del>$1</del>') // strikethrough
+      .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>') // link
+      .replace(/```(.*?)```/gs, '<pre class="code-block"><code>$1</code></pre>') //code block
+      .replace(/`(.*?)`/g, '<code>$1</code>') // inline code
+      .replace(/> (.*?)(\n|$)/g, '<blockquote>$1</blockquote>'); // blockquote
+
     this.History.next({
       prompt: prompt,
       response: text,
     });
-    // console.log(this.History);
+
     this._loading.next(false);
   }
 }

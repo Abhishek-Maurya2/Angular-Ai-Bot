@@ -3,11 +3,12 @@ import { SharedService } from './../../shared.service';
 import { NgIf } from '@angular/common';
 import { Auth } from '@angular/fire/auth';
 import { Firestore } from '@angular/fire/firestore';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dash-nav',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, RouterLink],
   templateUrl: './dash-nav.component.html',
   styleUrl: './dash-nav.component.css',
 })

@@ -1,18 +1,18 @@
 <div class="mainBox" *ngFor="let item of History">
   <div class="QueryBox">
     <div class="imgBox border-end">
-        <img
-          src="../../../assets/ai.png"
-          alt="login"
-          class="rounded-circle img-fluid p-1"
-        />
+      <img
+        [src]="user.profileImg"
+        alt="login"
+        class="rounded-circle img-fluid p-1"
+      />
     </div>
     <p class="">{{ item.prompt }}</p>
   </div>
   <div class="ResponseBox">
     <div class="d-flex flex-column gap-2 border-end">
-      <p class="mx-1">
-        {{ item.response }}
+      <p class="mx-1" [innerHTML]="item.response">
+        <!-- {{ item.response }} -->
       </p>
       <!-- options -->
       <div class="d-flex flex-row justify-content-end gap-1">
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="imgBox rounded-pill">
-      <img [src]="user.profileImg" alt="" class="" />
+      <img src="../../../assets/ai.png" alt="" class="" />
     </div>
   </div>
 </div>

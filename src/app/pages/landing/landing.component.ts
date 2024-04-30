@@ -8,4 +8,9 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',
 })
-export class LandingComponent {}
+export class LandingComponent {
+  dash() {
+    // rediredct to dashboard
+    window.location.href = '/dashboard';
+  }
+}

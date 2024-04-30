@@ -1,0 +1,94 @@
+.main {
+  overflow: hidden;
+  background-color: #f8f9fa;
+  height: 100vh;
+  background-image: url("/assets/bg.jpg");
+}
+.landing {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 10px 60px;
+}
+.hero {
+  line-height: 80px;
+  min-height: 50vh;
+  margin-top: 13vh;
+}
+.hero p {
+  font-size: 100px;
+  font-weight: 500;
+  /* capitalise */
+  text-transform: capitalize;
+}
+.footer {
+  border-top: solid black 1px;
+  padding-top: 2rem;
+}
+.footer .try {
+  border: solid black 1px;
+  padding: 10px 30px;
+  border-radius: 10rem;
+  background: none;
+  margin-right: 2px;
+}
+.arrow {
+  rotate: 300deg;
+  padding: 7px 9px;
+  border: none;
+  border-radius: 20rem;
+  background: none;
+  font-size: 20px;
+}
+span {
+  padding: 0;
+  margin: 0;
+}
+.footer button:hover {
+  background: black;
+  color: white;
+}
+.red {
+  background-color: red;
+  height: 80px;
+  width: 120px;
+  border-radius: 10px;
+  animation: increase 0.8s linear;
+  animation-fill-mode: forwards;
+  margin-bottom: 10px;
+}
+@keyframes increase {
+  /* scalex */
+  0% {
+    width: 0px;
+  }
+  40% {
+    width: 80px;
+  }
+  60% {
+    width: 100px;
+  }
+  80% {
+    width: 110px;
+  }
+  100% {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .landing {
+    margin: 10px 20px;
+  }
+  .hero {
+    margin-top: 10vh;
+    line-height: 30px;
+  }
+  .hero p {
+    font-size: 40px;
+  }
+  .red {
+    height: 40px;
+    width: 70px;
+    margin-bottom: 15px;
+  }
+}
